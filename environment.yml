@@ -1,0 +1,23 @@
+name: pangeo-climpred
+channels:
+  - conda-forge
+dependencies:
+  - pangeo-notebook
+  - xarray
+  - gcsfs
+  - intake
+  - intake-xarray
+  - zarr
+  - matplotlib
+  - pip
+  - nb_black
+  # regridding
+  - esmpy=7.1.0
+  - xesmf
+  - cartopy # mapping
+  - pip:
+    - git+https://github.com/bradyrx/climpred.git
+    - git+https://github.com/bradyrx/esmtools.git  # for FDR
+    - git+https://github.com/raybellwaves/xskillscore.git  # skill metrics
+    - git+https://github.com/luke-gregor/dataBrewery.git  # load datasets
+    - git+https://github.com/NCAR/intake-esm.git
